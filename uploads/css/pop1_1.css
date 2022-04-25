@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.btn_1{
+    position: relative;
+    padding:15px 20px;
+    background-color: white;
+    display: inline-block;
+    text-decoration:none;
+    color:blue;
+    cursor:pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+   
+}
+.btn_1:hover{
+    letter-spacing: 5px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5);
+    display: none;
+  }
+
+#popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1000;
+    background:#FFF;
+    Width:450px;
+    padding:80px 50px 50px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+    transition:2s ease;
+visibility:hidden;   
+}
+
+
+#popup.active{
+    visibility:visible;
+    top:50%;
+}
+
+ #popup .content{
+     position:relative;
+     width:100%;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+#popup .content img{
+    max-width: 80px;
+}
+
+
+#popup .content h2
+{
+font-size: 24px;
+font-weight: 500;
+color:#333;
+margin:20px 0 10px;
+}
+#popup .content p {
+    text-align:center;
+    font-size:16px;
+    color:#333;
+
+}
+#popup .content .inputbox
+{
+    position: relative;
+    width:100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+#popup .content .inputbox input{
+    width:100%;
+    border:1px solid rgba(0,0,0,0.08);
+    padding:15px;
+    outline:none;
+    
+}
+
+#popup .content .inputbox input[type="submit"]{
+    max-width:150px;
+    background: #12ec86;
+    color:white;
+    border:none;
+
+}
+
+
+
+.close{
+    
+    position:absolute;
+    top:10px;
+    right:30px;
+    cursor: pointer;
+}
+.close img{
+height: 40px;
+width:40px;
+}
